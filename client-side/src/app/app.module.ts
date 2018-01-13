@@ -4,6 +4,8 @@ import { NgModule, APP_INITIALIZER } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { HttpModule } from '@angular/http';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { StoreLogMonitorModule, useLogMonitor } from '@ngrx/store-log-monitor';
 
 // Services
 import { startupServiceFactory } from './core-services/startup.service';
@@ -29,6 +31,12 @@ const appRoutes: Routes = [
   { path: 'checkout', component: CheckoutComponent }
 ];
 
+export function instrumentOptions() {
+  return {
+    monitor: useLogMonitor({ visible: true, position: 'right' })
+  };
+}
+
 @NgModule({
   bootstrap: [AppComponent],
   declarations: [
@@ -41,6 +49,8 @@ const appRoutes: Routes = [
     CheckoutComponent
   ],
   imports: [
+    StoreDevtoolsModule.instrument(instrumentOptions),
+    StoreLogMonitorModule,
     BrowserModule,
     HttpModule,
     AngularFontAwesomeModule,
