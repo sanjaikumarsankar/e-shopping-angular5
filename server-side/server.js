@@ -1,11 +1,11 @@
 var express = require('express');
 var bodyParser = require('body-parser');
+// var productJson = require('./json/products.json');
 var app = express();
 
 var response = {};
 
-//10 employees loaded on page load
-var employee = {
+var products = {
     'products': {
 		'productList': [{
 			'name': 'SPORTSWEAR',
@@ -97,8 +97,6 @@ var employee = {
     }
 };
 	
-var userAttempt = 0;
-	
 var PORT = process.env.PORT || 3000;
 
 app.use(bodyParser.json());
@@ -107,11 +105,11 @@ app.use(express.static(__dirname));
 
 
 /**
- * ToDoList
+ * products
  */
 app.get('/products', function (req, res) {
 	res.header("Access-Control-Allow-Origin", "*");
-	res.send({ data : employee });
+	res.send({ data : products });
 });
 
 app.listen(PORT, function () {

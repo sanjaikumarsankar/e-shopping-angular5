@@ -1,0 +1,91 @@
+{
+    products: {
+		productList: [{
+			name: 'SPORTSWEAR',
+			submenu: [{
+				name: 'NIKE'
+			},{
+				name: 'UNDER ARMOUR'
+			},{
+				name: 'ADIDAS'
+			},{
+				name: 'PUMA'
+			},{
+				name: 'ASICS'
+			}]
+		},{
+			name: 'MENS',
+			submenu: [{
+				name: 'FENDI'
+			},{
+				name: 'GUESS'
+			},{
+				name: 'VALENTINO'
+			},{
+				name: 'DIOR'
+			},{
+				name: 'VERSACE'
+			}]
+		},{
+			name: 'WOMENS',
+			submenu: [{
+				name: 'FENDI'
+			},{
+				name: 'GUESS'
+			},{
+				name: 'VALENTINO'
+			},{
+				name: 'DIOR'
+			},{
+				name: 'VERSACE'
+			},{
+				name: 'ARMANI'
+			},{
+				name: 'PRADA'
+			},{
+				name: 'DOLCE'
+			},{
+				name: 'CHACEL'
+			}]
+		},{
+			name: 'KIDS'
+		},{
+			name: 'FASHION'
+		},{
+			name: 'HOUSEHOLD'
+		},{
+			name: 'INTERIORS'
+		},{
+			name: 'CLOTHING'
+		},{
+			name: 'BAGS'
+		},{
+			name: 'SHOES'
+		}],
+        productsDetails: [{
+                productName: 'Easy Polo Black Edition',
+                price: '$56',
+                imageUrl : '../../assets/images/home/logo.png'
+        },{
+                productName: 'Easy Polo Black Edition',
+                price: '$56',
+                imageUrl : '../../assets/images/home/logo.png'
+        },{
+                productName: 'Easy Polo Black Edition',
+                price: '$56',
+                imageUrl : '../../assets/images/home/logo.png'
+        },{
+                productName: 'Easy Polo Black Edition',
+                price: '$56',
+                imageUrl : '../../assets/images/home/logo.png'
+        },{
+                productName: 'Easy Polo Black Edition',
+                price: '$56',
+                imageUrl : '../../assets/images/home/logo.png'
+        },{
+                productName: 'Easy Polo Black Edition',
+                price: '$56',
+                imageUrl : '../../assets/images/home/logo.png'
+        }]
+    }
+};
