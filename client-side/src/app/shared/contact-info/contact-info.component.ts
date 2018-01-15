@@ -12,7 +12,6 @@ export class ContactInfoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('contactInfo' + this.contactInfo);
   }
 
 }

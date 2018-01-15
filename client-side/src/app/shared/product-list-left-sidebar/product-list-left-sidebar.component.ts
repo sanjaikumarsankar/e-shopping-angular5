@@ -1,24 +1,33 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnChanges, Input, ElementRef, Renderer } from '@angular/core';
 
 @Component({
   selector: 'app-product-list-left-sidebar',
   templateUrl: './product-list-left-sidebar.component.html',
   styleUrls: ['./product-list-left-sidebar.component.css']
 })
-export class ProductListLeftSidebarComponent implements OnInit {
+export class ProductListLeftSidebarComponent implements OnChanges  {
 
-  private toggle: string;
+  @Input()
+  private products: any;
 
-  constructor() { }
+  private productList: any;
 
-  ngOnInit() {
+  constructor(private el: ElementRef, private renderer: Renderer) {
   }
 
-  public expandCollapse() {
-    if (this.toggle === 'collapse') {
-      this.toggle = 'expand';
+  ngOnChanges() {
+    if (this.products && this.products.data) {
+      this.productList = this.products.data.products.productList;
+    }
+  }
+
+  public expandCollapse(index) {
+    if (this.el.nativeElement.querySelector('.index-' + index + '.collapse')) {
+      this.renderer.setElementClass(this.el.nativeElement.querySelector('.index-' + index), 'collapse', false);
+      this.renderer.setElementClass(this.el.nativeElement.querySelector('.index-' + index), 'expand', true);
     } else {
-      this.toggle = 'collapse';
+      this.renderer.setElementClass(this.el.nativeElement.querySelector('.index-' + index), 'collapse', true);
+      this.renderer.setElementClass(this.el.nativeElement.querySelector('.index-' + index), 'expand', false);
     }
   }
 

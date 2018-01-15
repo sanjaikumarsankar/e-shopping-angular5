@@ -10,7 +10,7 @@ export const LOAD_PRODUCTS_DATA = 'LOAD_PRODUCTS_DATA'; // Load CMS Data
  * @param action Action
  */
 
-export function productsReducer(state: Products = {test: undefined}, action: ProductsAction): Products {
+export function productsReducer(state: Products = {productList: undefined, productsDetails: undefined}, action: ProductsAction): Products {
     switch (action.type) {
         case LOAD_PRODUCTS_DATA:
             return Object.assign({}, state, action.payload);

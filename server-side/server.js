@@ -72,27 +72,27 @@ var products = {
         'productsDetails': [{
                 'productName': 'Easy Polo Black Edition',
                 'price': '$56',
-                'imageUrl' : '../../assets/images/home/logo.png'
+                'imageUrl' : '../../assets/images/home/product1.jpg'
         },{
                 'productName': 'Easy Polo Black Edition',
                 'price': '$56',
-                'imageUrl' : '../../assets/images/home/logo.png'
+                'imageUrl' : '../../assets/images/home/product2.jpg'
         },{
                 'productName': 'Easy Polo Black Edition',
                 'price': '$56',
-                'imageUrl' : '../../assets/images/home/logo.png'
+                'imageUrl' : '../../assets/images/home/product3.jpg'
         },{
                 'productName': 'Easy Polo Black Edition',
                 'price': '$56',
-                'imageUrl' : '../../assets/images/home/logo.png'
+                'imageUrl' : '../../assets/images/home/product4.jpg'
         },{
                 'productName': 'Easy Polo Black Edition',
                 'price': '$56',
-                'imageUrl' : '../../assets/images/home/logo.png'
+                'imageUrl' : '../../assets/images/home/product5.jpg'
         },{
                 'productName': 'Easy Polo Black Edition',
                 'price': '$56',
-                'imageUrl' : '../../assets/images/home/logo.png'
+                'imageUrl' : '../../assets/images/home/product6.jpg'
         }]
     }
 };

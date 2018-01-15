@@ -5,8 +5,8 @@
 <section>
     <div class="container">
 	    <div class="row">
-            <app-product-list-left-sidebar></app-product-list-left-sidebar>
-            <app-product-list-right-sidebar></app-product-list-right-sidebar>
+            <app-product-list-left-sidebar [products]="productList"></app-product-list-left-sidebar>
+            <app-product-list-right-sidebar [products]="productList"></app-product-list-right-sidebar>
         </div>
     </div>
 </section>
