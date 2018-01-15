@@ -14,10 +14,13 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   private  cms: any;
 
+  private  productList: any;
+
   constructor(private store: Store<AppStore>) {
     this.subscription = this.store.subscribe((stores: AppStore) => {
       this.cms = stores.cms.cms;
-      console.log(stores.cms);
+      this.productList = stores.products;
+      console.log(this.productList);
     });
   }
 

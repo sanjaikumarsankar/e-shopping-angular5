@@ -11,6 +11,20 @@ export const cmsJSON = {
                     'mapIcon': 'Map',
                     'googlePlusIcon': 'GooglePlus'
             }
+        },
+        'headerInfo': {
+            'logo': {
+                'logoUrl': '../../assets/images/home/logo.png',
+                'title': 'E-Shopper',
+                'alt': 'logo'
+            },
+            'navigation': {
+                'accountLabel': 'Account',
+                'wishListLabel': 'Wishlist',
+                'checkoutLabel': 'Checkout',
+                'cartLabel': 'Cart',
+                'loginLabel': 'Login'
+            }
         }
     }
 };

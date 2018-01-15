@@ -1,4 +1,12 @@
 <header>
     <app-contact-info [contactInfo]="cms.contactInfo"></app-contact-info>
-    <app-header-info></app-header-info>
+    <app-header-info [headerInfo]="cms.headerInfo"></app-header-info>
 </header>
+<section>
+    <div class="container">
+	    <div class="row">
+            <app-product-list-left-sidebar></app-product-list-left-sidebar>
+            <app-product-list-right-sidebar></app-product-list-right-sidebar>
+        </div>
+    </div>
+</section>

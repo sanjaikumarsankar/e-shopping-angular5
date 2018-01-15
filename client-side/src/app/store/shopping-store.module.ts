@@ -5,10 +5,12 @@ import { StoreModule } from '@ngrx/store';
 import { ActionReducer, combineReducers } from '@ngrx/store';
 import { AppStore } from './models/shopping-store.model';
 import { cmsReducer } from './reducers/cms.reducer';
+import { productsReducer } from './reducers/products.reducer.';
 import { CmsStateService } from './services/cms-state.service';
 
 export const rootReducer = {
-  cms: cmsReducer
+  cms: cmsReducer,
+  products: productsReducer
 };
 
 

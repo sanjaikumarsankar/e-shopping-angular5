@@ -1,7 +1,7 @@
 
 import { ActionReducer, Action } from '@ngrx/store';
 import { CMS } from '../models/cms.model';
-import { CmsAction } from '../actions/cms.actions';
+import { CmsAction } from '../actions/cms.action';
 
 export const LOAD_CMS_DATA = 'LOAD_CMS_DATA'; // Load CMS Data
 /**

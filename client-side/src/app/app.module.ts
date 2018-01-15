@@ -10,6 +10,7 @@ import { StoreLogMonitorModule, useLogMonitor } from '@ngrx/store-log-monitor';
 // Services
 import { startupServiceFactory } from './core-services/startup.service';
 import { CmsStateService } from './store/services/cms-state.service';
+import { ShoppingService } from './core-services/shopping.service';
 
 // Shared components
 import { ContactInfoComponent } from './shared/contact-info/contact-info.component';
@@ -22,6 +23,8 @@ import { LoginComponent } from './shopping/login/login.component';
 import { CartComponent } from './shopping/cart/cart.component';
 import { CheckoutComponent } from './shopping/checkout/checkout.component';
 import { ShoppingStoreModule } from './store/shopping-store.module';
+import { ProductListLeftSidebarComponent } from './shared/product-list-left-sidebar/product-list-left-sidebar.component';
+import { ProductListRightSidebarComponent } from './shared/product-list-right-sidebar/product-list-right-sidebar.component';
 
 
 const appRoutes: Routes = [
@@ -46,7 +49,9 @@ export function instrumentOptions() {
     HomeComponent,
     LoginComponent,
     CartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    ProductListLeftSidebarComponent,
+    ProductListRightSidebarComponent
   ],
   imports: [
     StoreDevtoolsModule.instrument(instrumentOptions),
@@ -59,11 +64,12 @@ export function instrumentOptions() {
   ],
   providers: [
     CmsStateService,
+    ShoppingService,
     {
       // Provider for APP_INITIALIZER
       provide: APP_INITIALIZER,
       useFactory: startupServiceFactory,
-      deps: [CmsStateService],
+      deps: [CmsStateService, ShoppingService],
       multi: true
   }
   ]
