@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { AppStore } from '../../store/models/shopping-store.model';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-login',
@@ -7,7 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  private subscription: Subscription;
+
+  private  cms: any;
+
+  constructor(private store: Store<AppStore>) {
+    this.subscription = this.store.subscribe((stores: AppStore) => {
+      this.cms = stores.cms.cms;
+    });
+  }
 
   ngOnInit() {
   }

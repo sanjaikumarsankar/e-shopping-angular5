@@ -25,6 +25,9 @@ import { CheckoutComponent } from './shopping/checkout/checkout.component';
 import { ShoppingStoreModule } from './store/shopping-store.module';
 import { ProductListLeftSidebarComponent } from './shared/product-list-left-sidebar/product-list-left-sidebar.component';
 import { ProductListRightSidebarComponent } from './shared/product-list-right-sidebar/product-list-right-sidebar.component';
+import { SignInComponent } from './shared/sign-in/sign-in.component';
+import { SignUpComponent } from './shared/sign-up/sign-up.component';
+import { CartDetailsComponent } from './shared/cart-details/cart-details.component';
 
 
 const appRoutes: Routes = [
@@ -51,7 +54,10 @@ export function instrumentOptions() {
     CartComponent,
     CheckoutComponent,
     ProductListLeftSidebarComponent,
-    ProductListRightSidebarComponent
+    ProductListRightSidebarComponent,
+    SignInComponent,
+    SignUpComponent,
+    CartDetailsComponent
   ],
   imports: [
     StoreDevtoolsModule.instrument(instrumentOptions),
