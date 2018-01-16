@@ -1,11 +1,11 @@
 <div class="col-sm-4">
   <div class="signup-form">
-    <h2>New User Signup!</h2>
+    <h2>{{signUpInfo.title}}</h2>
     <form action="#">
-      <input type="text" placeholder="Name"/>
-      <input type="password" placeholder="Password"/>
-      <input type="email" placeholder="Email Address"/>
-      <button type="submit" class="btn btn-default">Signup</button>
+      <input type="text" [placeholder]="signUpInfo.nameLabel"/>
+      <input type="password" [placeholder]="signUpInfo.passwordLabel"/>
+      <input type="email" [placeholder]="signUpInfo.emailAddressLabel"/>
+      <button type="submit" class="btn btn-default">{{signUpInfo.btnLabel}}</button>
     </form>
   </div>
 </div>

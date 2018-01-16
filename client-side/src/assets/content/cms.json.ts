@@ -25,6 +25,20 @@ export const cmsJSON = {
                 'cartLabel': 'Cart',
                 'loginLabel': 'Login'
             }
+        },
+        'signInInfo': {
+            'title': 'Login to your account',
+            'nameLabel': 'Name',
+            'passwordLabel': 'Password',
+            'keepMeSignedInLabel': 'Keep me signed in',
+            'btnLabel': 'Login'
+        },
+        'signUpInfo': {
+            'title': 'New User Signup!',
+            'nameLabel': 'Name',
+            'passwordLabel': 'Password',
+            'emailAddressLabel': 'Email Address',
+            'btnLabel': 'Signup'
         }
     }
 };

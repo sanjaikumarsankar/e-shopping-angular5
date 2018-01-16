@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-sign-up',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
+
+  @Input() private signUpInfo: any;
 
   constructor() { }
 

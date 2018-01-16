@@ -3,14 +3,14 @@
       <app-contact-info [contactInfo]="cms.contactInfo"></app-contact-info>
       <app-header-info [headerInfo]="cms.headerInfo"></app-header-info>
   </header>
-	<section id="form"><!--form-->
+	<section id="form">
 		<div class="container">
 			<div class="row">
-        <app-sign-in></app-sign-in>
+        <app-sign-in [signInInfo]="cms.signInInfo"></app-sign-in>
 				<div class="col-sm-1">
 					<h2 class="or">OR</h2>
         </div>
-        <app-sign-up></app-sign-up>
+        <app-sign-up [signUpInfo]="cms.signUpInfo"></app-sign-up>
 			</div>
 		</div>
-	</section><!--/form-->
+	</section>
